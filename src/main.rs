@@ -261,10 +261,10 @@ fn main() -> anyhow::Result<()> {
                 Err(e) => error!("Failed to clean {:?}: {:?}", project_path, e),
             };
         }
+    }
 
-        if processed_paths.len() > 1 {
-            info!("Total amount: {}", format_bytes(total_cleaned));
-        }
+    if processed_paths.len() > 1 {
+        info!("Total amount: {}", format_bytes(total_cleaned));
     }
 
     Ok(())
